@@ -1,0 +1,60 @@
+div {
+  font-size: 20px;
+}
+table.table {
+  border-collapse: collapse;
+  width: 90%;
+  margin: auto;
+}
+
+table.table tr.input td input {
+  width: 93%;
+  border: 1px solid #555;
+  padding: 10px;
+  color: #111;
+  font-size: 16px;
+  resize: none;
+}
+
+table.table tr.header td {
+  font-size: 22px;
+  border: 1px solid #000000;
+  text-align: left;
+  padding: 8px;
+}
+.buttonSubmit {
+  font-size: 24px;
+  display: block;
+  padding: 15px 50px;
+  margin: 0 5%;
+}
+
+table#progress {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 66%;
+  margin-left: auto;
+  margin-right: auto;
+}
+table#progress tr td {
+  font-size: 22px;
+  border: 1px solid #000000;
+  text-align: center;
+  padding: 8px;
+}
+
+#AWT,
+#ATAT {
+  font-size: 22px;
+  border: 1px solid #000000;
+  text-align: center;
+  width: 66%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.result {
+  display: none;
+}
+.MyClass {
+  display: block;
+}

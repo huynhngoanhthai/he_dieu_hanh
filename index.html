@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>roundRobin</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+  
+  
+
+    <table class = "table">
+        <tr class="header">
+            <td style="background-color:#FFB695"">Processes</td>
+            <td style="background-color:#FFB695"">Arrival time</td>
+            <td style="background-color:#96D1CD;">Burst time</td>
+            <td style="background-color:#74C3E1;">Quantum</td>
+        </tr>
+        <tr class="input">
+            <td><input type="text" class="Processes" ></td>
+            <td><input type="text" class="Arrival_time" ></td>
+            <td><input type="text" class="Burst_time" ></td>
+            <td><input type="number" class="Quantum" ></td>
+        </tr>
+    </table>
+
+    <button name="Submit" class="buttonSubmit" onclick="clickSubmit()">Submit</button>
+   
+   
+    <table id="progress">     </table>
+    <div id="result" class="result">
+    <div id="AWT"></div>
+    <div id="ATAT"></div>
+    </div>
+    <script>
+        function clickSubmit() {
+         
+        const Processes =  document.querySelector('.Processes').value.split(',')
+        const tempAT = document.querySelector('.Arrival_time').value.split(',')
+        const Arrival_time = filterArray(tempAT);
+        const tempBT =  document.querySelector('.Burst_time').value.split(',')
+        const Burst_time = filterArray(tempBT);
+
+        const Quantum = +document.querySelector('.Quantum').value
+        roundRobin(Processes, Arrival_time, Burst_time, Quantum)
+        document.getElementById("result").classList.add('MyClass')
+        }
+        
+    </script>
+    <script src="roundRobin.js"></script>
+</body>
+</html>
+
+
